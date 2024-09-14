@@ -1,0 +1,34 @@
+.footer {
+    background-color: #f3e5f5; // cor lilás claro
+    padding: 20px;
+    text-align: center;
+  
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+  
+      a {
+        color: #000; // cor dos ícones
+        &:hover {
+          color: #555; // cor dos ícones ao passar o mouse
+        }
+      }
+    }
+  
+    .credit {
+      margin-top: 20px;
+      font-size: 14px;
+      
+      a {
+        color: #000;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+          color: #555;
+        }
+      }
+    }
+  }
+  

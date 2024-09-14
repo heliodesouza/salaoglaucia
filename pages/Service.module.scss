@@ -1,0 +1,104 @@
+@import "/styles/mixins/color.scss";
+@import "/styles/mixins/responsive.scss";
+
+
+.serviceContainer {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: $yellow-color;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        @include Phone{
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 10px;
+        }
+      }
+    
+      .headerButton {
+        background-color: #6200ea;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        &:hover {
+          background-color: #3700b3;
+        }
+
+        @include Phone{
+          width: 100%;
+          padding: 12px 0;
+          margin-bottom: 10px;
+        }
+      }
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+
+      @include Phone {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+    }
+  
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+
+      @include Phone {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .imageGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+
+      @include Phone{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .backButton {
+      background-color: #6200ea;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #3700b3;
+      }
+      @include Phone {
+        width: 100%;
+        padding: 12px 0;
+      }
+    }
+  }
+  

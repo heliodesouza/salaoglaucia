@@ -1,0 +1,53 @@
+@import "/styles/mixins/responsive.scss";
+@import "/styles/mixins/fonts.scss";
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background: linear-gradient(to right, #f3e6ff, #e6ccff); // Gradiente de fundo
+  height: 100vh; // Para ocupar a tela inteira
+  gap: 20px; // Espaço entre o texto e a imagem
+  font-family: 'Poppins', sans-serif; // Define a fonte padrão para o container
+
+  @include Phone {
+    grid-template-columns: 1fr;
+  }
+}
+
+.text {
+  flex: 1; // O texto ocupará cerca de metade do contêiner
+  padding: 20px;
+  color: #333; // Cor do texto para contraste
+  max-width: 40%; // Define a largura máxima do texto
+  h1 {
+    @include sizeTitle;
+    font-family: 'Playfair Display', serif; // Aplica fonte serifada ao título
+    margin-bottom: 20px; // Espaço abaixo do título
+  }
+  
+  p {
+    @include sizeSubTitle; // Ajusta o tamanho do texto descritivo
+    margin-bottom: 10px; // Espaço entre parágrafos
+  }
+  
+}
+
+.imageContainer {
+  flex: 1.5; // A imagem ocupará um pouco mais de espaço que o texto
+  display: flex;
+  justify-content: flex-end; // Posiciona a imagem no lado direito
+  align-items: center;
+}
+
+.image {
+  width: 100%; // A imagem ocupará todo o espaço do contêiner
+  height: auto;
+  max-width: 600px; // Limita a largura máxima da imagem
+  object-fit: cover; // Mantém a proporção da imagem
+}
+
+

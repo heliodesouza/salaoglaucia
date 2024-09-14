@@ -1,0 +1,18 @@
+@import "/styles/mixins/responsive.scss";
+
+
+@mixin sizeTitle {
+    font-size: 3rem;
+
+    @include Phone {
+        font-size: 1rem;
+    }
+}
+
+@mixin sizeSubTitle{
+    font-size: 30px;
+
+    @include Phone{
+        font-size: 15px;
+    }
+}

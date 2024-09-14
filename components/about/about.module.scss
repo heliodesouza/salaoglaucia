@@ -1,0 +1,68 @@
+/* about.module.scss */
+@import "/styles/mixins/color.scss";
+@import "/styles/mixins/responsive.scss"; // Importando os mixins de responsividade
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: $black-color;
+    gap: 20px; // Espaço entre o texto e a imagem
+    font-family: 'Poppins', sans-serif;
+
+    @include Phone {
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+    }
+}
+  
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: $yellow-color;
+
+    @include Phone {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+  
+.text {
+    font-size: 20px;
+    flex: 1; // O texto ocupará cerca de metade do contêiner
+    padding: 22px;
+    color: $yellow-color;
+    max-width: 50%;
+
+    @include Phone {
+        max-width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+  
+.imageContainer {
+    display: flex;
+    gap: 15px;
+
+    @include Phone {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+  
+.image {
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner */
+    border: 4px solid $yellow-color; /* Borda ao redor das imagens */
+
+    @include Phone {
+        width: 80px;
+        height: 80px;
+    }
+}

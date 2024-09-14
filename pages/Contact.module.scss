@@ -1,0 +1,189 @@
+@import "/styles/mixins/color.scss";
+@import "/styles/mixins/responsive.scss";
+
+.container {
+    background-color: black;
+    color: $yellow-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo no eixo horizontal */
+    justify-content: center; /* Centraliza o conteúdo no eixo vertical */
+    padding: 40px;
+    gap: 20px;
+
+    @include Phone {
+        padding: 20px;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Centraliza verticalmente os itens */
+        margin-bottom: 20px;
+
+        @include Phone {
+            justify-content: space-around; /* Ajusta os botões para os dispositivos móveis */
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.texts {
+    
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px;
+
+    span {
+        
+        font-size: 30px;
+        font-weight: bold;
+        color: #df12b9;
+
+        @include Phone {
+            font-size: 24px;
+        }
+    }
+
+    h1 {
+        font-size: 65px;
+        font-weight: bold;
+
+        @include Phone {
+            font-size: 48px;
+        }
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 1.5;
+        margin-top: 20px;
+
+        @include Phone {
+            font-size: 16px;
+        }
+    }
+}
+.home {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #3700b3;
+    }
+
+    @include Phone{
+      width: 100%;
+      padding: 12px 0;
+      margin-bottom: 10px;
+    }
+  }
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #25D366; /* Cor do botão WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    animation: blink 1s infinite; /* Adiciona a animação de piscar */
+  
+    &:hover {
+      background-color: #1ebd5a; /* Cor do botão ao passar o mouse */
+    }
+    
+    @include Phone {
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 14px;
+      text-align: center;
+    }
+}
+
+@keyframes blink {
+    50% {
+      opacity: 0.5; /* Reduz a opacidade para 50% no meio da animação */
+    }
+}
+
+  
+
+
+.formContainer {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center; /* Centraliza o formulário dentro do container */
+    width: 100%;
+    max-width: 600px; /* Define uma largura máxima para o formulário */
+
+    @include Phone {
+        padding: 15px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    .formGroup {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            color: #000;
+
+            &:focus {
+                outline: none;
+                border-color: #6200ea;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+    }
+}
+
+.submitButton {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #3700b3;
+    }
+
+    @include Phone {
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+
+
