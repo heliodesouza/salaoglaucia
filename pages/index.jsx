@@ -1,8 +1,9 @@
 import Header from "@/components/header"
 import styles from "./Home.module.scss"
 import Banner from "@/components/banner"
-import About from "@/components/About"
-import Footer from "@/components/Footer"
+import About from "@/components/about"
+import Footer from "@/components/footer"
+
 
 export default function Home() {
   return (
@@ -11,7 +12,6 @@ export default function Home() {
       <Banner />
       <About />
       <Footer />
-
     </div>
     
   )
