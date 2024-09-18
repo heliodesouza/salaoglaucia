@@ -14,7 +14,10 @@
   font-family: 'Poppins', sans-serif; // Define a fonte padrão para o container
 
   @include Phone {
-    grid-template-columns: 1fr;
+    flex-direction: column; // Empilha os elementos verticalmente no mobile
+    justify-content: center; // Centraliza verticalmente no modo mobile
+    text-align: center; // Centraliza o texto
+    padding: 20px; // Ajusta o padding no mobile
   }
 }
 
@@ -23,6 +26,7 @@
   padding: 20px;
   color: #333; // Cor do texto para contraste
   max-width: 40%; // Define a largura máxima do texto
+
   h1 {
     @include sizeTitle;
     font-family: 'Playfair Display', serif; // Aplica fonte serifada ao título
@@ -33,7 +37,11 @@
     @include sizeSubTitle; // Ajusta o tamanho do texto descritivo
     margin-bottom: 10px; // Espaço entre parágrafos
   }
-  
+
+  @include Phone {
+    max-width: 100%; // O texto ocupará 100% da largura no mobile
+    padding: 10px;
+  }
 }
 
 .imageContainer {
@@ -41,6 +49,11 @@
   display: flex;
   justify-content: flex-end; // Posiciona a imagem no lado direito
   align-items: center;
+
+  @include Phone {
+    justify-content: center; // Centraliza a imagem no mobile
+    margin-top: 20px; // Adiciona um espaçamento entre o texto e a imagem
+  }
 }
 
 .image {
@@ -48,6 +61,8 @@
   height: auto;
   max-width: 600px; // Limita a largura máxima da imagem
   object-fit: cover; // Mantém a proporção da imagem
+
+  @include Phone {
+    max-width: 80%; // Ajusta a largura da imagem no mobile
+  }
 }
-
-

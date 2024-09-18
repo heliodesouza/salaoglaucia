@@ -10,44 +10,68 @@
     color: $white-color;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-
+    justify-content:center; /* Mantém espaçamento entre logo e menu no desktop */
+    
     @include Phone {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        flex-direction: column; /* Empilha os itens no mobile */
+        align-items: center; /* Centraliza os itens no mobile */
+        justify-content: center; /* Centraliza verticalmente */
     }
+}
+
+.logotipo {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin-left: 20px; /* Mover mais para a direita */
+    margin-right: auto; /* Mantém um espaçamento automático à direita */
+
+
+    
+    @include Phone {
+        margin-bottom: 0; /* Espaçamento abaixo da logo em dispositivos móveis */
+        margin-left: 0; /* Remove o alinhamento ao centro */
+        margin-right: auto; /* Move a logo para a esquerda */
+        justify-content: flex-start; /* Garante alinhamento à esquerda */
+    }
+    
+    
 }
 
 .menu {
     color: $yellow-color;
     font-size: 26px;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os itens do menu */
+
     a + a {
         margin-left: 38.9px;
     }
 
     @include Phone {
-      font-size: 20px;
-      display: block;
-      margin-left: 0;
+        a{
+            margin-left: 38.9px;
+        }
+        font-size: 20px;
+        flex-direction: column; /* Coloca os itens do menu em coluna no mobile */
+        align-items: center; /* Centraliza os itens no mobile */
+        justify-content: center;
+        gap: 10px;
+        margin-left: 0;
     }
 }
 
-.action {
-    text-align: center; /* Centraliza o botão */
-
-    @include Phone {
-      text-align: left;
-      width: 100%;
-    }
-}
-
-.button {
+.action{
     display: inline-block;
     padding: 15px 30px;
     background-color: #25D366; /* Cor do botão WhatsApp */
+    text-align: center; /* Centraliza o botão */
+    margin-left: auto; /* Alinha o botão à direita no desktop */
+    margin-right: 20px; /* Espaçamento entre o botão e o elemento à esquerda */
+    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -56,20 +80,21 @@
     animation: blink 1s infinite; /* Adiciona a animação de piscar */
   
     &:hover {
-      background-color: #1ebd5a; /* Cor do botão ao passar o mouse */
+        background-color: #1ebd5a; /* Cor do botão ao passar o mouse */
     }
     
     @include Phone {
-      width: 100%;
-      padding: 12px 24px;
-      font-size: 14px;
-      text-align: center;
+        width: 80%; /* Define a largura completa no modo responsivo */
+        padding: 12px 24px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px; /* Espaçamento entre os botões no modo responsivo */
     }
 }
 
 @keyframes blink {
     50% {
-      opacity: 0.5; /* Reduz a opacidade para 50% no meio da animação */
+        opacity: 0.5; /* Reduz a opacidade para 50% no meio da animação */
     }
 }
 

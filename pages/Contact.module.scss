@@ -18,24 +18,24 @@
     .header {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* Espaça os itens uniformemente */
         align-items: center; /* Centraliza verticalmente os itens */
         margin-bottom: 20px;
 
         @include Phone {
-            justify-content: space-around; /* Ajusta os botões para os dispositivos móveis */
+            flex-direction: column; /* Coloca os itens em coluna no modo responsivo */
+            align-items: center; /* Centraliza os itens */
+            gap: 10px; /* Espaçamento entre os itens */
             margin-bottom: 10px;
         }
     }
 }
 
 .texts {
-    
     text-align: center; /* Centraliza o texto */
     margin-bottom: 20px;
 
     span {
-        
         font-size: 30px;
         font-weight: bold;
         color: #df12b9;
@@ -64,6 +64,7 @@
         }
     }
 }
+
 .home {
     background-color: #6200ea;
     color: #fff;
@@ -75,15 +76,15 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #3700b3;
+        background-color: #3700b3;
     }
 
-    @include Phone{
-      width: 100%;
-      padding: 12px 0;
-      margin-bottom: 10px;
+    @include Phone {
+        width: 100%; /* Define a largura completa no modo responsivo */
+        padding: 12px 0;
+        margin-bottom: 10px;
     }
-  }
+}
 
 .button {
     display: inline-block;
@@ -97,25 +98,23 @@
     animation: blink 1s infinite; /* Adiciona a animação de piscar */
   
     &:hover {
-      background-color: #1ebd5a; /* Cor do botão ao passar o mouse */
+        background-color: #1ebd5a; /* Cor do botão ao passar o mouse */
     }
     
     @include Phone {
-      width: 100%;
-      padding: 12px 24px;
-      font-size: 14px;
-      text-align: center;
+        width: 100%; /* Define a largura completa no modo responsivo */
+        padding: 12px 24px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px; /* Espaçamento entre os botões no modo responsivo */
     }
 }
 
 @keyframes blink {
     50% {
-      opacity: 0.5; /* Reduz a opacidade para 50% no meio da animação */
+        opacity: 0.5; /* Reduz a opacidade para 50% no meio da animação */
     }
 }
-
-  
-
 
 .formContainer {
     background-color: #1a1a1a;
@@ -181,9 +180,8 @@
     }
 
     @include Phone {
-        width: 100%;
+        width: 100%; /* Define a largura completa no modo responsivo */
         padding: 14px 0;
     }
 }
-
 
