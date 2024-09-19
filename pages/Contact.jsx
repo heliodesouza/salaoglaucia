@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from "./Contact.module.scss";
+import Footer from "@/components/footer"
 
 const Contact = () => {
   const router = useRouter();
@@ -113,7 +114,11 @@ const Contact = () => {
           <button type="submit" className={styles.submitButton}>Enviar</button>
         </form>
       </div>
+      
+      
     </div>
+    
+    
   );
 };
 

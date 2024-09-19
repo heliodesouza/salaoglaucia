@@ -50,17 +50,7 @@
         margin-left: 38.9px;
     }
 
-    @include Phone {
-        a{
-            margin-left: 38.9px;
-        }
-        font-size: 20px;
-        flex-direction: column; /* Coloca os itens do menu em coluna no mobile */
-        align-items: center; /* Centraliza os itens no mobile */
-        justify-content: center;
-        gap: 10px;
-        margin-left: 0;
-    }
+    
 }
 
 .action{
