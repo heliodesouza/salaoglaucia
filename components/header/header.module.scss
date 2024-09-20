@@ -32,7 +32,7 @@
     
     @include Phone {
         margin-bottom: 0; /* Espaçamento abaixo da logo em dispositivos móveis */
-        margin-left: 0; /* Remove o alinhamento ao centro */
+        margin-left: -35px; /* Remove o alinhamento ao centro */
         margin-right: auto; /* Move a logo para a esquerda */
         justify-content: flex-start; /* Garante alinhamento à esquerda */
     }
@@ -58,7 +58,7 @@
     padding: 15px 30px;
     background-color: #25D366; /* Cor do botão WhatsApp */
     text-align: center; /* Centraliza o botão */
-    margin-left: auto; /* Alinha o botão à direita no desktop */
+    margin-left: 15px; /* Alinha o botão à direita no desktop */
     margin-right: 20px; /* Espaçamento entre o botão e o elemento à esquerda */
     margin-top: 10px; /* Espaçamento superior */
     margin-bottom: 20px; /* Espaçamento inferior */
