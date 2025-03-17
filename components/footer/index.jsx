@@ -13,7 +13,7 @@ const Footer = () => {
         <a href="https://www.facebook.com/share/t1XXkLpaHRQMhdXu/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="3x" />
         </a>
-        <a href="https://www.instagram.com/glauciasousa_nails" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/glauciasousa_espacodabeleza_/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} size="3x" />
         </a>
       </div>
